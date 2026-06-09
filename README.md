@@ -1,7 +1,9 @@
 # Ethical-Hacking-Cheatsheet
 
 1. Domain Controller Product Version
+
 Solution 1
+
 nmap --script smb-os-discovery -p 445 <DC-IP>
 
 
